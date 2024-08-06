@@ -1,34 +1,106 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
     background-color: #f4f4f4;
 }
 
-.container {
-    text-align: center;
+header {
+    margin-bottom: 30px;
+    padding: 20px 0;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-size: 1.6em;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 0;
 }
 
-p {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-}
-
-.links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #007BFF;
+.civ-lab {
+    color: #ae2be2;
     font-weight: bold;
 }
 
-.links a:hover {
+.section-header {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content-box {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+}
+
+.content-section {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    color: #000000;
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.section-description {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.section-description p {
+    margin: 0;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-header {
+    margin-right: 10px;
+}
+
+.contact-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Styles for links */
+a {
+    color: #ae2be2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
     text-decoration: underline;
+}
+
+.contact-link {
+    font-size: 1.5em;
+    color: #ae2be2;
+}
+
+.contact-link:hover {
+    color: #8a23b5;
+}
+
+/* ensure inline links don't disrupt text flow */
+.section-description a {
+    display: inline;
 }
