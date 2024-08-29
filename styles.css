@@ -33,20 +33,76 @@ h1 {
 
 .content-box {
     background-color: #f4f4f4;
-    padding: 10px 20px;
+    padding: 0 20px; /* Remove top and bottom padding */
 }
 
 .content-section {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    align-items: start;
+    display: flex;
+    align-items: center;
     gap: 15px;
-    padding: 15px 0;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 25px 0; /* Decreased from 30px to 25px */
+    /* Remove the border-bottom property */
+    min-height: 200px;
+    margin-bottom: 0;
+    position: relative; /* Added for pseudo-element positioning */
+}
+
+.content-section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2.5%; /* Start at 10% from the left */
+    width: 95%; /* Make the line 90% of the container width */
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.content-section:first-child {
+    padding-top: 12px; /* Decreased from 15px to 12px */
 }
 
 .content-section:last-child {
     border-bottom: none;
+    padding-bottom: 12px; /* Decreased from 15px to 12px */
+}
+
+.section-media {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 180px;
+    overflow: visible; /* Change from hidden to visible */
+    padding: 10px; /* Add padding to create space for the shadow */
+    position: relative; /* Add this for maintaining aspect ratio */
+}
+
+.section-media::before {
+    content: "";
+    display: block;
+    padding-top: 66.67%; /* 180/270 = 0.6667, maintains 3:2 aspect ratio */
+}
+
+/* class for HSFGW logo */
+.section-image-fill {
+    position: absolute; /* Position absolutely within the container */
+    top: 10px; /* Account for padding */
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: calc(100% - 20px) !important; /* Account for padding */
+    height: calc(100% - 20px) !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.section-content {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Add this */
+    height: 100%; /* Add this */
 }
 
 .section-title {
@@ -54,6 +110,7 @@ h1 {
     font-size: 1.1em;
     margin: 0;
     font-weight: bold;
+    margin-bottom: 0.5rem; /* Add space between title and description */
 }
 
 .section-description {
@@ -72,12 +129,13 @@ h1 {
 }
 
 .contact-header {
-    margin-right: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
 }
 
 .contact-links {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 /* Styles for links */
@@ -103,4 +161,113 @@ a:hover {
 /* ensure inline links don't disrupt text flow */
 .section-description a {
     display: inline;
+}
+
+.clickable-image {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Add rounded corners */
+}
+
+.clickable-image:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+
+/* Add styles for the anchor tag wrapping the image */
+.section-media a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        text-align: center; /* Center the header text */
+    }
+
+    .section-header {
+        text-align: center; /* Center the content box text */
+    }
+
+    .content-section {
+        flex-direction: column;
+        align-items: center; /* Center align the flex items */
+        text-align: center; /* Center align the text */
+        gap: 10px;
+        min-height: auto;
+    }
+
+    .content-section:not(:last-child)::after {
+        left: 12.5%; /* Start at 15% from the left on mobile */
+        width: 75%; /* Make the line 70% of the container width on mobile */
+    }
+
+    .section-media {
+        width: 70%; /* Scale down the image container */
+        max-width: 250px; /* Adjust maximum width as needed */
+        height: auto; /* Remove fixed height */
+        margin: 0 auto 15px;
+        padding: 0; /* Remove padding */
+        position: relative; /* Keep this for maintaining aspect ratio */
+    }
+
+    .section-media::before {
+        content: ""; /* Keep the pseudo-element */
+        display: block;
+        padding-top: 66.67%; /* Maintain the 3:2 aspect ratio */
+    }
+
+    .section-image-fill {
+        position: absolute; /* Keep absolute positioning */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important; /* Maintain cover to fill the container */
+        object-position: center !important;
+    }
+
+    .section-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the content */
+    }
+
+    .text-container {
+        width: 80%;
+        max-width: 90%; /* Limit the width of the text container */
+    }
+
+    .section-title {
+        margin-bottom: 0.3rem;
+    }
+
+    .section-description {
+        font-size: 0.9em;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center; /* Center align the contact section */
+    }
+
+    .contact-header {
+        margin-right: 0px;
+        margin-bottom: 10px;
+        text-align: center; /* Center align the contact header text */
+    }
+
+    .contact-links {
+        justify-content: center; /* Center align the contact links */
+    }
 }
