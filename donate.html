@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support The Civilization Lab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="./images/civlab_logo_stacked_v2.png" type="image/png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPEGSLL7ZW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XPEGSLL7ZW');
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Main heading -->
+        <h1>Support <span class="civ-lab">The Civ Lab</span></h1>
+    </header>
+
+    <div class="donation-section">
+        <div>
+            <script>
+                var link = document.createElement('link');
+                link.rel="stylesheet"
+                link.href = "https://ribbon-public-bucket.s3.amazonaws.com/donation-embed-v3/ribbon-donation-embed.css";
+                document.head.appendChild(link);
+            </script>
+                      
+            <div id="app"></div>
+                      
+            <div class="ribbon-donation-embed-container">
+                <ribbon-donation-embed
+                    id="ribbon-donation-embed"
+                    form_uuid="chem_VT33mRe60OmeDsiO"
+                    dialog="false"
+                />
+                <script type="module" crossorigin src="https://ribbon-public-bucket.s3.amazonaws.com/donation-embed-v3/ribbon-donation-embed.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to home link -->
+    <div class="back-to-home">
+        <a href="index.html">← Back to home</a>
+    </div>
+</body>
+</html>

@@ -182,25 +182,6 @@ a:hover {
     height: 100%;
 }
 
-/* Styles for donation section */
-.donation-section {
-    /* Add spacing between sections */
-    margin: 30px 0;
-    /* Center the donation embed */
-    display: flex;
-    justify-content: center;
-    /* Add padding to match other sections */
-    padding: 0 20px;
-}
-
-/* Style the donation container */
-.ribbon-donation-embed-container {
-    /* Add some spacing around the embed */
-    padding: 20px 0;
-    /* Ensure full width */
-    width: 100%;
-}
-
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
     body {
@@ -289,13 +270,19 @@ a:hover {
     .contact-links {
         justify-content: center; /* Center align the contact links */
     }
+}
 
-    .donation-section {
-        padding: 0 10px;
-        margin: 20px 0;
-    }
+.back-to-home {
+    text-align: center;
+    margin: 2rem 0;
+}
 
-    .ribbon-donation-embed-container {
-        padding: 15px 0;
-    }
+.back-to-home a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.back-to-home a:hover {
+    text-decoration: underline;
 }
