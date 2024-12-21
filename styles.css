@@ -21,7 +21,7 @@ h1 {
 }
 
 .civ-lab {
-    color: #ae2be2;
+    color: #b2228c;
     font-weight: bold;
 }
 
@@ -140,22 +140,23 @@ h1 {
 
 /* Styles for links */
 a {
-    color: #ae2be2;
-    font-weight: 600;
-    text-decoration: none;
+    color: #b2228c !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 .contact-link {
     font-size: 1.5em;
-    color: #ae2be2;
+    color: #b2228c;
 }
 
 .contact-link:hover {
-    color: #8a23b5;
+    /* Darken the primary color by 20% for hover state to create visual feedback */
+    color: #8c1b70;
 }
 
 /* ensure inline links don't disrupt text flow */
@@ -256,6 +257,10 @@ a:hover {
         font-size: 0.9em;
     }
 
+    .donation-section {
+        text-align: center;
+    }
+
     .contact-section {
         flex-direction: column;
         align-items: center; /* Center align the contact section */
@@ -284,5 +289,15 @@ a:hover {
 }
 
 .back-to-home a:hover {
+    text-decoration: underline;
+}
+
+.other-ways-to-give {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.other-ways-to-give a {
+    color: inherit;
     text-decoration: underline;
 }
