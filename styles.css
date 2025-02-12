@@ -5,7 +5,7 @@ body {
     padding: 20px;
     max-width: 600px;
     margin: 0 auto;
-    background-color: #f4f4f4;
+    background-color: #FDF3E7;
 }
 
 header {
@@ -21,7 +21,7 @@ h1 {
 }
 
 .civ-lab {
-    color: #b2228c;
+    color: #C51057;
     font-weight: bold;
 }
 
@@ -32,7 +32,7 @@ h1 {
 }
 
 .content-box {
-    background-color: #f4f4f4;
+    background-color: #FDF3E7;
     padding: 0 20px; /* Remove top and bottom padding */
 }
 
@@ -140,18 +140,19 @@ h1 {
 
 /* Styles for links */
 a {
-    color: #b2228c !important;
+    color: #C51057 !important;
     font-weight: 600 !important;
     text-decoration: none !important;
 }
 
 a:hover {
+    color: #C51057 !important;
     text-decoration: underline !important;
 }
 
 .contact-link {
     font-size: 1.5em;
-    color: #b2228c;
+    color: #C51057;
 }
 
 .contact-link:hover {
